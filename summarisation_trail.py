@@ -10,6 +10,8 @@ import numpy as np
 import imutils
 from random import randint
 from tkinter import Tk
+from tkinter import Button
+from tkinter import Label
 from tkinter.filedialog import askopenfilename
 
 
@@ -18,6 +20,18 @@ class c1:
     def f1(self):
         fgbg=cv2.bgsegm.createBackgroundSubtractorMOG()   #Mixture of Gaussian model which is Robust to lighting chnages,Shadows
 
+        r = Tk() 
+        r.title('Video Summariser') 
+        r.geometry('300x200')
+        #lbl = Label(r, text="Hello")
+        #lbl.grid(column=0, row=0)
+        #button = Button(r, text='Choose file', width=30, command=r.destroy, height=2) 
+        #button.pack() 
+        lbl = Label(r, text="Welcome",font=("Arial Bold", 20))
+        lbl.grid(column=0, row=0)
+        btn = Button(r, text="Choose file", bg="orange", fg="red")
+        btn.grid(column=0, row=1)
+        r.mainloop()
 
         Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
         filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
