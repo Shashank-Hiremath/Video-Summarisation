@@ -29,7 +29,7 @@ class c1:
         #button.pack() 
         lbl = Label(r, text="Welcome",font=("Arial Bold", 20))
         lbl.grid(column=0, row=0)
-        btn = Button(r, text="Choose file", bg="orange", fg="red")
+        btn = Button(r, command=r.destroy, text="Choose file", bg="orange", fg="red")
         btn.grid(column=0, row=1)
         r.mainloop()
 
